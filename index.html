@@ -33,8 +33,18 @@
       <div class="ico">📄</div>
       <div class="meta"><b>Unterrichtsunterlagen.pdf</b><small>PDF · ca. 0,2 MB</small></div>
     </div>
-    <a class="btn" href="Unterrichtsunterlagen_fuers_Handy.pdf" download>Jetzt herunterladen</a>
+    <a class="btn" id="dl" href="Unterrichtsunterlagen_fuers_Handy.pdf" download>Jetzt herunterladen</a>
     <div class="foot">HFW Schaffhausen · Digitalisierung</div>
   </div>
+  <!-- GoatCounter: Seitenaufruf = Scan (automatisch) -->
+  <script data-goatcounter="https://belibas.goatcounter.com/count"
+          async src="//gc.zgo.at/count.js"></script>
+  <script>
+    document.getElementById('dl').addEventListener('click', function(){
+      if (window.goatcounter && window.goatcounter.count) {
+        window.goatcounter.count({ path: 'pdf-download', title: 'PDF heruntergeladen', event: true });
+      }
+    });
+  </script>
 </body>
 </html>
